@@ -6,7 +6,7 @@ function [fig1,ax1] =UniformFigs2D(num)
     ax1=gca;
     set(ax1,'ActivePositionProperty','Position');
 
-    %------------ screen postion & window size ---------------------------
+    %------------ Postion relative to screen & window size ---------------------------
     %-- set(fig1,'Position', [Xo Yo width height]);
     set(fig1,'Units','points');
     set(fig1, 'OuterPosition', [10 30 614 544]); 
