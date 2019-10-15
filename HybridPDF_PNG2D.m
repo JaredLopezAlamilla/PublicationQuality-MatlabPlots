@@ -2,9 +2,9 @@ function HybridPDF_PNG2D(Fig,Axes,c,KeepObjects, RelativePosition, Draft, Key)
 % This function cotains intructions to produce and
 % hybrid PDF-PNG 2D image within matlab
 
-% When a density plot or contour plot in matlab is generated from big array the eps/pdf tools 
+% When a density plot or contour plot in matlab is generated from big array  
 % the direct exportation produce artifacts in the PDF image that are unpleasant
-% Also the size of the produced vectorial imaga can exceed the 20Mb
+% Also the size of the produced vectorial image can exceed the 20Mb
 % For this purpose a hybrid file is better for publication
 if nargin < 4
     KeepObjects = [];
@@ -65,12 +65,10 @@ KeepObjectsVisibility = get(KeepObjects, 'Visible');
 [KeepObjects.Visible] = deal('off');
 
 drawnow;
-% % Frame = getframe(Figure, PixelPosition); % captures Bitmap plot
-% % print('-dpng','-r600','plot.png'); 
+% % print('-dpng','-r600','plot.png'); % option '-r600' implies 600dpi
 % % print('-dpng','-r250','plot.png'); 
 print('-dpng','-r100','plot.png');
 Frame=imread('plot.png');
-% Frame1=imagesc(Frame);
 
 [Axes.Children.Visible] = deal('off');
 Axes.Visible = 'on';
