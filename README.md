@@ -6,6 +6,9 @@ This repository contains a colection of scripts for matlab.
 The scripts will help to produce consistent aesthetics plots
 for publication in maths, physics journals and others such a thesis project.
 
+The functions and scripts should be added to the matlab path for easier use.
+In particular startup.m shoul be located inside the UserName/Documents/MATLAB folder
+
 ## Minimal example
 
 once matlab has been initialized we can proceed to plot a dummy array
