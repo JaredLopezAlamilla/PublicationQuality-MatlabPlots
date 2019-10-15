@@ -1,5 +1,12 @@
 function HybridPDF_PNG3D(Fig,Axes,KeepObjects, RelativePosition, Draft, Key)
+% This function cotains intructions to produce and
+% hybrid PDF-PNG 3D image within matlab
 
+% When a surface plot or mesh plot in matlab is generated from big array  
+% the direct exportation produce artifacts in the PDF image that are unpleasant
+% Also the size of the produced vectorial image can exceed the 20Mb making it 
+% slow to load into a compiled pdf such as an article or book
+% For this purpose a hybrid file is better for publication
 if nargin < 3
     KeepObjects = [];
 end
